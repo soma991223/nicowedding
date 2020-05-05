@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #father{
+            width: 350px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+            left:calc(50% - 175px);
+            top:calc(50% - 75px);
+            background: url(images/bg.jpg) no-repeat center center;
+            background-size:cover;
+          
+            
+        }
+        #father div{
+            border:solid 1px red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #son2{
+            right:0px;
+            top:0px;
+            
+        } #son3{
+           
+           left:-50px;
+            bottom:-50px
+            
+        } #son4{
+           
+            left:100%;
+            top:100%;
+            
+        }
+      
+       
+    
+    </style>
+</head>
+<body>
+    <div id="father">
+        <div id="son1"><img src="images/w1.gif" alt=""></div>
+        <div id="son2"><img src="images/w2.gif" alt=""></div>
+        <div id="son3"><img src="images/w3.gif" alt=""></div>
+        <div id="son4"><img src="images/w4.gif" alt=""></div>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>三欄式版型</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        #wrapper{
+            width: 800px;
+            background-color: red;
+            margin:0 auto;/*這個屬性是用來水平置中用的*/
+        }
+        header{
+            height: 300px;
+            background-color: red;
+        }
+         nav{
+            height: 50px;
+            background-color: black;
+        }
+         aside{
+             width:25%;
+            height: 300px;
+            background-color: cyan;
+             float:left;
+        }
+         main{
+            height: 300px;
+             width:50%;
+            background-color:magenta;
+              float:left;
+        }
+         article{
+            height: 300px;
+             width: 25%;
+            background-color: yellow;
+              float:right;
+        }
+         footer{
+            height: 50px;
+            background-color: black;
+             clear:both;
+        }
+
+        @media screen and (max-width:768px){
+            aside,main{
+                width: 50%;
+            }
+           
+            article{
+               display: none; 
+            }
+           
+        }
+       
+        @media screen and (max-width:576px){
+            aside,main,article{
+                width: 100%;
+                display:block;
+            }
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <main></main>
+        <article></article>
+        <footer></footer>
+    </div>
+</body>
+</html>

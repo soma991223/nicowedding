@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh_tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+       <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+
+       
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #box{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: solid 1px red;
+        }
+        .waterfall{
+            column-count: 3;
+            column-gap: 0;
+        }
+        .item{
+            list-style: none;
+            font-size: 0px;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+        }
+        .item::before{
+            content: attr(alt);
+            font-size: 18px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            width: calc(100% - 10px);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.63);
+            text-align: center;
+            height: 0px;
+            line-height: 40px;
+            transition: all 0.7s;
+        }
+        .item:hover::before{
+            height: 40px;
+            
+        }
+        .itemcontent{
+            width: 100%;
+        }
+    </style>
+<body>
+    <div id="box">
+        <ul class="waterfall">
+            
+
+        </ul>
+    </div> 
+
+
+    <script>
+        
+        $(document).ready(function(){
+            new WOW().init();
+//                alert("ok");
+            
+             var animatorType=["bounceIn","bounceInDown","bounceInLeft","bounceInRight","bounceInUp","flash","shake","tada","wobble","jello"];
+            var aniLength=animatorType.length;
+             
+            
+            
+            $.ajax({
+                url:"photodata.xml",
+                type:"get",
+                datatype:"xml",
+                success:function(mydata){
+//                    console.log(mydata);
+                $(mydata).find("photorecord").each(function(){
+                var picTitle=$(this).children("phototitle").text();
+                var picURL=$(this).children("photoname").text();
+                var aniIndex=Math.floor(Math.random()*aniLength)+1;
+                var htmlTag= "<li class='item' alt='"+picTitle+"' ><a href='images/"+picURL+"' data-fancybox='gallery'><img src='images/"+picURL+"'  class='itemcontent wow "+animatorType[aniIndex]+"'></a></li>";
+                $("ul").append(htmlTag);
+               
+            })
+                },
+                
+                error:function(edata){
+                    alert("讀取不到或是結構錯誤");
+                }    
+                
+        
+        });
+        });
+    
+    </script>
+</body>
+</html>

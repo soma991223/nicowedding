@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>巨匠婚紗館</title>
+    <!--    插入外部樣式表-->
+    <link rel="stylesheet" href="css/blueberry.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <!--    插入外部樣式表-->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            box-sizing: border-box;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /*        HEADER*/
+        header {
+            height: 50px;
+            background-color: lightcoral;
+            text-align: center;
+            color: black;
+            font-weight: 500;
+            line-height: 50px;
+            font-size: 23px;
+        }
+
+        .blueberry {
+            position: relative;
+        }
+
+        .blueberry .pager {
+            display: none;
+        }
+
+        .blueberry::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background: url(images/line.png);
+            opacity: 0.15;
+        }
+
+        /*        HEADER*/
+
+        /*        NAV*/
+        nav ul {
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.49)
+        }
+
+        nav li {
+            list-style: none;
+            font-size: 18px;
+            padding: 15px 10px;
+            display: inline-block;
+            
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul li:hover {
+            font-weight: 700;
+            animation: color 0.5s linear infinite alternate;      
+        }
+        @keyframes color{
+            from{
+                background-color: rgba(234, 125, 125, 0.62);
+            }
+            to{
+                background-color: rgba(83, 72, 74, 0.56);
+            }
+        }
+        @keyframes barcolor{
+            from{
+                color: rgba(0, 0, 0, 0.84);
+            }
+            to{
+                color: rgba(111, 99, 99, 0.68);
+            }
+        }
+
+        /*        NAV*/
+
+        /*        BAR*/
+
+        #bar {
+            animation: barcolor 0.3s infinite linear;
+            display: none;
+        }
+
+        @media (max-width:576px) {
+            nav ul{
+                position: absolute;
+                top:0;
+                left:0;
+                width:0%;
+                height: 100%;
+                background-color: rgba(0,0,0,.8);
+                padding-top:50px;
+                overflow:hidden;
+                transition:all .5s;
+                
+            }
+            nav ul li a{
+                white-space: nowrap;
+                color: white;
+                font-size: 16px;
+            }
+            .showmenu{
+                width: 30%;
+                
+            }
+            .flipTriangle{
+                transform: rotate(180deg);
+            }
+            #bar{
+            display: block;
+        }
+
+        }
+
+        /*        BAR*/
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>巨匠婚紗館</header>
+        <banner>
+            <!-- blueberry -->
+
+            <div class="blueberry">
+                <ul class="slides">
+                    <li><img src="images/01.jpg" /></li>
+                    <li><img src="images/02.jpg" /></li>
+                    <li><img src="images/03.jpg" /></li>
+                </ul>
+            </div>
+
+            <!-- blueberry -->
+        </banner>
+        <nav>
+            <ul>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">作品介紹</a></li>
+                <li><a href="#">地理位置</a></li>
+                <li><a href="#">連絡我們</a></li>
+            </ul>
+        </nav>
+        <i id=bar class="fas fa-caret-right fa-4x"></i>
+    </div>
+
+
+    <!--    插入外部特效連結-->
+    <script src="https://kit.fontawesome.com/61a3e7fb3b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="js/jquery.blueberry.js"></script>
+    <!--    自行撰寫-->
+<script>
+    $(window).load(function() {
+	$('.blueberry').blueberry();
+});
+ $(document).ready(function(){
+//     alert("這是我的第一個jquery程式");
+//     按一下BAR顯示訊息
+     $("#bar").on("click",function(){
+         $("nav ul").toggleClass("showmenu");
+         $(this).toggleClass("flipTriangle");
+     });
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+ });
+    
+</script>
+</body></html>

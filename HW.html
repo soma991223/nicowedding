@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    
+       <script>
+    $(document).ready(function(){
+//var a=(Math.floor(Math.random()*9)+1);
+//var b=(Math.floor(Math.random()*9)+1);
+//var c=(Math.floor(Math.random()*9)+1);
+//var d=(Math.floor(Math.random()*9)+1);
+//        var ans=new Array(4);
+//          for(var m=0;m<4;m++){
+//              ans[m]=Math.floor(Math.random()*9)+1;
+//              for (var p=0;p<m;p++)
+//                  {
+//                      m--;
+//                      break;
+//                  }
+//              console.log(ans[m]);
+//          }
+//        for(var m=0;m<6;m++)
+//            console.log(ans[m]);
+        
+        $("#start").on("click",function(){
+           var gno=parseInt($("#guess").val());
+           if (gno>ans)
+               $("body").html(gno+a+"A"+b+"B");
+            else if (gno<ans)
+                $("body").html(gno+a+"A"+b+"B");
+            else
+                $("body").html(gno+a+"A"+b+"B");
+//            
+        });
+        
+        });
+    </script>
+    
+    <h2>幾a幾b</h2>
+    <p>請輸入四個數字，數字對且位置正確得A,數字正確位置錯誤得B</p>
+    <hr>
+    <form action="">
+    <input type="text" id="guess">
+    <input type="button" id="start" value="輸入">
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+</head>
+<body>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+     
+    <script>
+         $(document).ready(function(){
+//             alert("ok");
+             
+             
+//             *條件判斷語法一*
+//             var score=30;
+//             if (score>=60)
+//                 {
+//                 alert("及格");
+//                 alert("讚");
+//                 }
+//             else 
+//                 alert("有待加強");
+    //當敘述多於一筆時,須用大括號包住,若只有一筆則不需要 
+             
+             
+//             *條件判斷語法二*
+//             var score=89;
+//             if (score>=90)
+//                    alert("A");      
+//             else if (score>=80)
+//                    alert("B");       
+//             else if (score>=70)
+//                    alert("C");         
+//             else if (score>=60)
+//                    alert("D");
+//             else 
+//                 alert("E");
+//            
+//             *亂數(0.0<=Math.random<1)*
+//             alert(Math.random());
+             
+//             *亂數(整數區間65~90)*
+//             (*最大數-最小數+1)+最小數 
+//             alert(Math.floor(Math.random()*25)+65);
+             
+//             *簡易猜數字遊戲*
+             //先產生答案,讓使用者猜
+//        var ans=(Math.floor(Math.random()*100)+1);//產生1-100間整數亂數,並儲存到ans變數內
+        //當使用者輸入好之後按作答鈕要開始判斷太大,太小或答對了
+//        $("#start").on("click",function(){
+//           var gno=parseInt($("#guess").val());//取得使用者在文字方塊內所輸入的內容並儲存到gno變數內,但是資料型態為字串,並透過parseInt函數將字串轉數字
+//           if (gno>ans)
+//               alert(gno+"太大了");
+//            else if (gno<ans)
+//                alert(gno+"太小了");
+//            else
+//                alert(gno+"恭喜您答對了");
+////            
+//        });
+//         
+//         var score=new Array(4);
+//         score[0]="123";
+//         alert(score[0]);
+             new WOW().init();
+             var animatorType=["bounceIn","bounceInDown","bounceInLeft","bounceInRight","bounceInUp","flash","shake","tada","wobble","jello"];
+             var rndNo=(Math.floor(Math.random()*10));
+             var animatorNo=animatorType[rndNo];
+             $("h2").addClass(animatorNo);
+             
+             
+             
+             
+         });
+         
+    
+    
+    </script>
+    
+    <h2 class="wow">猜數字遊戲</h2>
+    <p>請輸入1~100間的數字</p>
+    <hr>
+    <form action="">
+    <input type="text" id="guess">
+    <input type="button" id="start" value="輸入">
+    </form>
+</body>
+</html>

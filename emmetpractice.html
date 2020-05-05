@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMMET語法練習</title>
+</head>
+<body>
+<!--   下一層(子) > -->
+<nav>
+    <ul>
+        <li></li>
+    </ul>
+</nav>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+
+<nav>
+    <ul>
+        <li></li>
+    </ul>
+</nav>
+<!------------------------------------------>
+
+
+<!--同一層(兄弟) + -->
+<header></header>
+<nav></nav>
+<main></main>
+<footer></footer>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+
+<header></header>
+<nav></nav>
+<main></main>
+<footer></footer>
+<!------------------------------------------>
+
+
+<!--上一層(父) ^ -->
+<header>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, pariatur!</h1>
+</header>
+<nav>
+    <ul>
+        <li>Lorem.</li>
+    </ul>
+</nav>
+<main></main>
+<footer></footer>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+<header>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, ut.</h1>
+</header>
+<nav>
+    <ul>
+        <li>Lorem.</li>
+    </ul>
+</nav>
+<main></main>
+<footer></footer>
+<!------------------------------------------>
+
+<!--多組 *-->
+<ul>
+    <li>Lorem.</li>
+    <li>Dignissimos.</li>
+    <li>Quia.</li>
+    <li>Adipisci!</li>
+    <li>Quod!</li>
+</ul>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+
+<ul>
+    <li>Lorem.</li>
+    <li>Illum.</li>
+    <li>Dolor.</li>
+    <li>Porro.</li>
+    <li>Temporibus?</li>
+</ul>
+<!------------------------------------------>
+
+
+<!--群組 ( )-->
+<div id="about">
+    <div>
+        <h2>Lorem ipsum dolor.</h2>
+        <img src="" alt="">
+    </div>
+    <div>
+        <h2>Vero adipisci, magnam.</h2>
+        <img src="" alt="">
+    </div>
+    <div>
+        <h2>Vero, quasi, fugiat?</h2>
+        <img src="" alt="">
+    </div>
+</div>
+<main></main>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+
+#about>div*3>h2>lorem3^img^^main
+<!------------------------------------------>
+
+<!--屬性[ ] 變數$-->
+<ul>
+    <li id="p1">Lorem.</li>
+    <li id="p2">Culpa!</li>
+    <li id="p3">Quidem.</li>
+    <li id="p4">Non.</li>
+    <li id="p5">Maxime.</li>
+</ul>
+<!--請在下方輸入emmet語法,快速產生上方之html標籤-->
+
+ul>li[id=p$]*5>lorem1
+<!------------------------------------------>
+</body>
+</html>

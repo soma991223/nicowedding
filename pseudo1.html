@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>偽元素運用</title>
+    <style>
+        #box,#box::after,#box::before{
+            
+            position: absolute;
+            border-radius: 50%;/*設定圓角程度*/
+           animation:ro 1s infinite linear; 
+        }
+        #box{
+           width: 150px;
+            height: 150px;
+            border-top:solid 8px red;
+            left:calc(50% - 75px);
+            top:calc(50% - 75px);
+        }
+/*        利用為元素製作其它二個盒子*/
+        #box::after{
+            content:"";
+            border-top: solid 8px blue;
+            top:-28px;
+            left:-28px;
+            right:-28px;
+            bottom:-28px;
+            animation-duration: 1.5s;
+        }  
+        #box::before{
+            content:"";
+            border-top: solid 8px green;
+            top:15px;
+            left:15px;
+            right:15px;
+            bottom:15px;
+            animation-duration: 2s;
+            
+                
+        }
+/*    設定動畫關鍵影格*/
+        @keyframes ro{
+            
+            from{
+             transform: rotate(0deg);
+            }
+            to{
+             transform: rotate(360deg);
+                
+            }
+        }
+    
+    </style>
+</head>
+<body>
+ <div id="box"></div>   
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>偽元素介紹</title>
+    <style>
+    
+        #box{
+            width: 200px;
+            height: 200px;
+            border:solid 1px red;
+            position: absolute;
+        }
+        #box::before{
+            content: "";
+            width: 100px;
+            position: absolute;
+            height: 100px;
+            border:solid 1px red;
+        }
+        #box::after{
+            content: "";
+            width: 50px;
+            position: absolute;
+            height: 50px;
+            border:solid 1px red;
+        }
+    
+    </style>
+</head>
+<body>
+   <div id="box"></div> 
+</body>
+</html>

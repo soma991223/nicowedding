@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+       <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+       
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #box{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: solid 1px red;
+        }
+        .waterfall{
+            column-count: 3;
+            column-gap: 0;
+        }
+        .item{
+            list-style: none;
+            font-size: 0px;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+        }
+        .item::before{
+            content: attr(alt);
+            font-size: 18px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            width: calc(100% - 10px);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.63);
+            text-align: center;
+            height: 0px;
+            line-height: 40px;
+            transition: all 0.7s;
+        }
+        .item:hover::before{
+            height: 40px;
+            
+        }
+        .itemcontent{
+            width: 100%;
+        }
+    </style>
+<body>
+    <div id="box">
+        <ul class="waterfall">
+            <li class="item" alt="相片1" ><a href="images/w1.jpg" data-fancybox="gallery"><img src="images/w1.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片2" ><a href="images/w2.jpg" data-fancybox="gallery"><img src="images/w2.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片3" ><a href="images/w3.jpg" data-fancybox="gallery"><img src="images/w3.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片4" ><a href="images/w4.jpg" data-fancybox="gallery"><img src="images/w4.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片5" ><a href="images/w5.jpg" data-fancybox="gallery"><img src="images/w5.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片6" ><a href="images/w6.jpg" data-fancybox="gallery"><img src="images/w6.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片7" ><a href="images/w7.jpg" data-fancybox="gallery"><img src="images/w7.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片8" ><a href="images/w8.jpg" data-fancybox="gallery"><img src="images/w8.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片9" ><a href="images/w9.jpg" data-fancybox="gallery"><img src="images/w9.jpg"   class="itemcontent"></a></li>
+            <li class="item" alt="相片10"><a href="images/w10.jpg" data-fancybox="gallery"><img src="images/w10.jpg"  class="itemcontent"></a></li>
+            <li class="item" alt="相片11"><a href="images/w11.jpg" data-fancybox="gallery"><img src="images/w11.jpg"  class="itemcontent"></a></li>
+            <li class="item" alt="相片12"><a href="images/w12.jpg" data-fancybox="gallery"><img src="images/w12.jpg"  class="itemcontent"></a></li>
+            <li class="item" alt="相片13"><a href="images/w13.jpg" data-fancybox="gallery"><img src="images/w13.jpg"  class="itemcontent"></a></li>
+            <li class="item" alt="相片14"><a href="images/w14.jpg" data-fancybox="gallery"><img src="images/w14.jpg"  class="itemcontent"></a></li>
+            <li class="item" alt="相片15"><a href="images/w15.jpg" data-fancybox="gallery"><img src="images/w15.jpg"  class="itemcontent"></a></li>
+        </ul>
+    </div> 
+
+
+</body>
+</html>

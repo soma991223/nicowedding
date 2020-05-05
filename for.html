@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迴圈測試</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    
+      <table border=1></table>
+       <script>
+    $(document).ready(function(){
+        //0~100能被5整除的數
+//        var m;
+//        for(m=0;m<=100;m+=5){
+//            console.log(m);
+//        }
+        
+        //1+2+3+...100=
+//        var m,sum=0;
+//        for(m=1;m<=100;m++){
+//            sum+=m;
+//            console.log(sum);
+//        }
+        //直排10顆星
+//        var tag;
+//        for(var m=0; m<=10; m++)
+//        {tag+="<p>*</p>"}
+//        $("body").html(tag);
+        
+        //九九乘法表
+//        var tag="";
+//        for(var m=1;m<=9;m++){
+//            tag+="<tr>";
+//            for(var p=1;p<=9;p++)
+//                {
+//                    tag+="<td>"+p+"*"+m+"="+m*p+"</td>";
+//                }
+//            tag+="</tr>";
+//        }
+//        $("table").html(tag);
+//        
+//    
+    
+        //1~5排星星
+//        var tag="";
+//        for(var m=1;m<=5;m++)
+//            {for(var p=1;p<=m;p++)
+//            {tag+="*";
+//             }
+//             tag+="<br>";
+//            }  
+//        $("body").html(tag);
+        
+        //大樂透
+        var lotto=new Array(6);
+          for(var m=0;m<6;m++){
+              lotto[m]=Math.floor(Math.random()*49)+1;
+              for (var p=0;p<m;p++)
+                  {
+                      m--;
+                      break;
+                  }
+              console.log(lotto[m]);
+          }
+        for(var m=0;m<6;m++)
+            console.log(lotto[m]);
+        
+        
+        });
+    </script>
+</body>
+</html>

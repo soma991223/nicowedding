@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <div id="sliderbox"></div>
+    </header>
+    <nav>
+        <ul>
+            <li>Lorem.</li>
+            <li>Vitae?</li>
+            <li>Harum!</li>
+            <li>Numquam.</li>
+            <li>Autem.</li>
+        </ul>
+    </nav>
+    <div id="welcome">
+        <h2></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aut dicta veniam deleniti illo dolores voluptatibus assumenda rem dolore veritatis?</p>
+    </div>
+    <div id="welcomepic">
+        <section><img src="" alt=""><img src="" alt=""></section>
+        <section><img src="" alt=""><img src="" alt=""></section>
+        <section><img src="" alt=""><img src="" alt=""></section>
+    </div>
+    <article>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus fugiat quia odio necessitatibus libero iusto, voluptatum exercitationem distinctio similique nemo?</p>
+        </section>
+        <section>
+            <p>Harum fuga laborum totam illum reiciendis impedit labore officiis porro beatae alias itaque eum, nemo eius quibusdam sed quidem tenetur.</p>
+        </section>
+        <section>
+            <p>Earum facilis soluta optio animi dolore ab excepturi iste exercitationem, repellat tempore, reprehenderit, vel sint cumque accusantium quisquam. Amet, dignissimos.</p>
+        </section>
+    </article>
+    <div id="carouselbox"></div>
+    <div id="newsevent">
+        <section>
+            <img src="" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, omnis.</p>
+        </section>
+        <section>
+            <img src="" alt="">
+            <p>Aut iusto molestias minus ratione dolor, quibusdam ipsam quod ipsum.</p>
+        </section>
+        <section>
+            <img src="" alt="">
+            <p>Quidem nemo deserunt molestiae, inventore quod, magnam illo tempore ex?</p>
+        </section>
+    </div>
+    <footer>
+        <h1></h1>
+        <p></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>動畫製作</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left:0;
+            top:0;
+/*            啟動關鍵影格動畫*/
+            animation: move 5s  alternate infinite ease-in;
+/*            animation-delay: 3s;*/
+           
+        }
+    
+/*    產生動畫關鍵影格*/
+        @keyframes move{
+            0%{
+                top:0;
+                left:0;
+            }
+           50%{
+                top:500px;
+                left:500px;
+                opacity: .1;
+            }
+            100%{
+                top:100px;
+                left:800px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="box"></div>  
+</body>
+</html>

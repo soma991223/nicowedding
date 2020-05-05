@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>妮可婚紗館</title>
+<!--    favicon-->
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAD29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2AhuY+f8fl/r/HJn5/x6Y+f/29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCH5f6/x+X+f/29vYC9vb2Avb29gL29vYCHZr2/x+X+//29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCJ5vt/x2Z+P/29vYC9vb2Avb29gL29vYC9vb2Avb29gIfl/r/Gpf5//b29gL29vYC9vb2Avb29gL29vYCK77v/yCW+/8bmfj/Jpvy//b29gL29vYC9vb2Avb29gL29vYC9vb2Ah2Y+v/29vYC9vb2Avb29gJpxuv/Hb/z/27u//8hl/v/9vb2Ah+a+P8bmff/v+////b29gL29vYC9vb2Avb29gIbmfj/9vb2Avb29gL29vYCIL31//b29gL29vYCHZj5//b29gL29vYC9vb2Ah+Y+P/29vYC9vb2Avb29gL29vYCHpj7/8Xu9v/29vYCIr31//b29gL29vYC9vb2Ah2Y+P/29vYC9vb2Avb29gL29vYCHZj4//b29gL29vYC9vb2Ah6Y+f/29vYC9vb2AiG/8v/29vYC9vb2Avb29gIdmff/9vb2Avb29gL29vYC9vb2Ah+Z9//29vYC9vb2Avb29gIcmfj/9vb2Atb4/f8kvfX/9vb2Avb29gL29vYCjOf8/x2Y+v/29vYC9vb2Avb29gIdmfr/9vb2Avb29gIcmvf/ePD8//b29gL29vYCI77z//b29gL29vYC9vb2Avb29gJm5P//G5n3/zmb5P/29vYCH5j4/0Gc4P8dmPr/duz9//b29gL29vYC9vb2AiO89v/29vYC9vb2Avb29gL29vYC9vb2Avb29gJX0Pv/H5n3/x2a+P907P//9vb2Avb29gL29vYC9vb2Avb29gJz7f//Ib32//b29gL29vYC9vb2Avb29gL29vYC9vb2Ah6X+/8cmfj/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2AiW67v8fvvX/9vb2Avb29gL29vYC9vb2AhuZ+f8dmfj/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCge/7/x+/9P8jvfb/GJn6/x+Y+P81m/H/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCDyKq/w8hrf/29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCg6bt/0Fp8P8/ZvT/FCKt//b29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC/w8AAPzzAAD5+QAA8P0AAMI9AADbvAAAu90AALvdAAA52QAAvEMAAL8PAACfnwAAzz8AAOB/AAD5/wAA8P8AAA==" rel="icon" type="image/x-icon" />
+<!--    設定fb分享鈕-->
+     <meta property="fb:app_id" content="1302696226594057" />
+     <meta property="og:url" content="https://nicowedding.netlify.com/" />
+     <meta property="og:type" content="website" />
+     <meta property="og:title" content="妮可婚紗館" />
+     <meta property="og:description" content="全台最便宜的婚紗社" />
+     <meta property="og:image" content="https://nicowedding.netlify.com/images/01.jpg" />
+    <!--    插入外部樣式表-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/blueberry.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+          
+
+    <!--    插入外部樣式表-->
+    <style>
+        #fbshare{
+            position: fixed;
+            top: 50px;
+            left: 20px;
+            z-index: 9999;
+        }
+    
+    </style>
+</head>
+
+<body>
+<!--loading動畫-->
+<div id="loading"> 
+<div class="sk-circle" >
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+</div>
+<!--  fb留言板嵌入-->
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v5.0&appId=1302696226594057&autoLogAppEvents=1"></script>
+  
+<!--  fb分享鈕嵌入-->
+  <div id="fbshare" class="fb-share-button" data-href="https://nicowedding.netlify.com/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fchihching0121.byethost24.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">分享</a></div>
+   
+    <div id="container">
+        <header>妮可婚紗館</header>
+        <banner>
+            <!-- blueberry -->
+
+            <div class="blueberry">
+                <ul class="slides">
+                    <li><img src="images/01.jpg" /></li>
+                    <li><img src="images/02.jpg" /></li>
+                    <li><img src="images/03.jpg" /></li>
+                </ul>
+            </div>
+
+            <!-- blueberry -->
+        </banner>
+<!--        導覽列-->
+        <nav>
+            <ul id="menu">
+                <li alt="about"><a href="#">關於我們</a></li>
+                <li alt="news"><a href="#">最新消息</a></li>
+                <li alt="gallery"><a href="#">作品介紹</a></li>
+                <li alt="location"><a href="#">地理位置</a></li>
+                <li alt="message"><a href="#">連絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="bar"></div>
+<!--    導覽列-->
+<!--關於我們-->
+<section id="about">
+    <h2>ABOUT</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, voluptate ex aspernatur dolorum optio debitis reiciendis unde incidunt non illum, fugit animi facilis, nihil exercitationem!</p>
+    <div>
+    <img class="mb20 wow slideInRight" src="images/h1.jpg" alt="">
+    <img class="wow slideInRight" src="images/h2.jpg" alt="">
+    </div>
+    <div>
+    <img class="wow bounceInUp" src="images/h3.jpg" alt="">
+    </div>
+    <div>
+    <img class="mb20 wow slideInLeft" src="images/h4.jpg" alt="">
+    <img class="wow slideInLeft" src="images/h5.jpg" alt="">
+    </div>
+</section>
+<!--關於我們-->
+<h6 class="clearfix"></h6>
+<!--裝飾區段-->
+<section id="mright">
+    <h2>Mr.Right</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A mollitia cum, voluptatem soluta molestias maxime repellat porro ipsum molestiae aut repellendus, sequi, eum nesciunt doloribus!</p>
+    <div><p class="pleft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque dolores beatae nulla ipsam, id nostrum ipsa eum delectus accusamus quos possimus voluptatibus assumenda distinctio repudiandae iusto, expedita facilis reiciendis.</p></div>
+    
+    <div class="headpic wow bounceInUp"></div>
+    
+    <div>
+    <p class="pright">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas maiores libero ex minima eius vitae, atque, in veritatis consequuntur, vel. A ad molestiae facere vero porro mollitia voluptatibus itaque.</p>
+    </div>
+    <h6 class="clearfix"></h6>
+</section>
+
+
+<!--最新消息-->
+<section id="news">
+    <h2>NEWS</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo praesentium quaerat, eos repudiandae tempore unde perferendis, fugit inventore modi.</p>
+    <div id="n1" alt="https://www.youtube.com/embed/Rarogi2_lGk?enablejsapi=1&version=3&playerapiid=ytplayer"></div>
+    <div id="n2" alt="https://www.youtube.com/embed/8j1xiiAZhIQ?enablejsapi=1&version=3&playerapiid=ytplayer"></div>
+    <div id="n3" alt="https://www.youtube.com/embed/zImzUqWWwxs?enablejsapi=1&version=3&playerapiid=ytplayer"></div>
+    <h6 class="clearfix"></h6>
+</section>
+<!--最新消息的model-->
+<div class="model hidemodel">
+  
+
+   
+<!--1-->
+   <iframe id="newsvideo" width="80%" height="80%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--2-->
+<!--   <iframe width="80%" height="80%" src="https://www.youtube.com/embed/8j1xiiAZhIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--3-->
+<!--   <iframe width="80%" height="80%" src="https://www.youtube.com/embed/zImzUqWWwxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    
+    <i class="far fa-times-circle fa-3x closebtn"></i>
+</div>
+
+<!--  作品展示-->
+  <section id="gallery">
+    <h2>GALLERY</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo praesentium quaerat, eos repudiandae tempore unde perferendis, fugit inventore modi.</p>
+    
+        <ul class="waterfall">
+            
+        </ul>
+    </section>
+    
+<!--    地理位置-->
+    <section id="location">
+    <h2>LOCATION</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo praesentium quaerat, eos repudiandae tempore unde perferendis, fugit inventore modi.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463276.7683289003!2d121.21846469722706!3d24.88604884454892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e6794605f6d5%3A0xd31f2956f8450c4d!2z5beo5Yyg6Zu76IWmLee-headseiqjeitiSB8IOWtuOmbu-iFpuiqsueoiyB8IOmbu-iFpuijnOe_kuePrQ!5e0!3m2!1szh-TW!2stw!4v1577443762256!5m2!1szh-TW!2stw" width="100%" height="400" frameborder="0" style="border:1;" allowfullscreen=""></iframe>
+    </section>
+    
+<!--    fb留言板-->
+   <section id="message">
+    <h2>MESSAGE</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore id beatae soluta neque ducimus explicabo ipsam harum recusandae dolor tempore?</p>
+    <br>
+    <hr>
+    <div class="fb-comments" data-href="http://chihching0121.byethost24.com" data-width="100%" data-numposts="5"></div>
+    </section>
+  
+</div>
+    
+    <!--footer-->
+       <footer>
+       <h5>2020 &copy;Copyright all by 妮可婚紗館</h5>
+   </footer>
+   
+    <i id="goTop" alt="menu" class="fas fa-arrow-alt-circle-up fa-3x"></i>
+
+
+    <!--    插入外部特效連結-->
+    <script src="https://kit.fontawesome.com/61a3e7fb3b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.blueberry.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    
+    <!--    自行撰寫-->
+    <script>
+       new WOW().init(); $(window).load(function() {
+            $("#loading").fadeOut(500);
+           
+            $('.blueberry').blueberry();
+        });
+
+        $(document).ready(function() {
+
+            $(".bar").on("click", function() {
+                $("nav ul").toggleClass("menuHeight");
+            });
+        
+        
+        
+//         開啟影片視窗
+            $("#news div").on("click", function(){
+                
+                var moviename=$(this).attr("alt");
+                $(".model iframe").attr("src",moviename);
+                            
+                $(".model").removeClass("hidemodel");
+            });
+        
+//        關閉影片式窗
+        $(".closebtn").on("click", function(){ 
+            $(".model").addClass("hidemodel");
+            
+            $("#newsvideo")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        });
+        
+        
+        
+        
+        
+        });
+        
+
+
+        //    alert("Hello.jquery")}
+        //;
+        
+        $(document).ready(function(){
+            new WOW().init();
+//                alert("ok");
+            
+             var animatorType=["bounceIn","bounceInDown","bounceInLeft","bounceInRight","bounceInUp","flash","shake","tada","wobble","jello"];
+            var aniLength=animatorType.length;
+             
+            
+            
+            $.ajax({
+                url:"photodata.xml",
+                type:"get",
+                datatype:"xml",
+                success:function(mydata){
+//                    console.log(mydata);
+                $(mydata).find("photorecord").each(function(){
+                var picTitle=$(this).children("phototitle").text();
+                var picURL=$(this).children("photoname").text();
+                var aniIndex=Math.floor(Math.random()*aniLength)+1;
+                var htmlTag= "<li class='item' alt='"+picTitle+"' ><a href='images/"+picURL+"' data-fancybox='gallery'><img src='images/"+picURL+"'  class='itemcontent wow "+animatorType[aniIndex]+"'></a></li>";
+                $("#gallery ul").append(htmlTag);
+               
+            })
+                },
+                
+                error:function(edata){
+                    alert("讀取不到或是結構錯誤");
+                }    
+            
+                
+        
+        });
+                    $("nav ul li,#goTop").on("click",function(){
+                        var linkName=$(this).attr("alt")
+                $("html,body").animate({
+                    scrollTop:$("#"+linkName).offset().top
+                
+            },1500,"linear")
+        });
+
+        });
+        
+    
+    </script>
+</body>
+</html>

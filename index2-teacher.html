@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>巨匠緍紗社</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    --連結外部樣式表檔--begin---->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,400,500,700&display=swap&subset=chinese-traditional" rel="stylesheet">
+<link rel="stylesheet" href="css/blueberry.css">
+<!--    --連結外部樣式表檔--end---->
+    <style>
+/*        重置樣式*/
+        *{
+            margin: 0;
+            padding: 0;
+          font-family: 'Noto Sans TC', sans-serif;
+           
+        }
+/*        重置樣*/
+        #container{
+            width: 100%;
+            max-width: 1200px;
+            margin:0 auto;
+            border: solid 1px red;
+        }
+        header{
+            height: 50px;
+            background-color: black;
+            color:white;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+        }
+/*        這是自訂blueberry slider樣式--begin--*/
+        .blueberry{
+            position: relative;
+        }
+        
+        .blueberry .pager{
+            display: none;
+        }
+        .blueberry::before{
+            content:"";
+            position: absolute;
+            z-index: 999;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background: url(images/line.png);
+            opacity:.3; 
+        }
+      
+/*        這是自訂blueberry slider樣式--end--*/
+        nav ul{
+            list-style-type: none;
+            background-color: #000;
+            color:white;
+            text-align: center;
+        }
+        nav ul li{
+            display: inline-block;
+          padding: 20px 30px;
+            font-size: 18px;
+        }
+        #bar{
+            animation:barAnimator .5s alternate infinite; 
+            display: none;
+        }
+        
+/*        手機版樣式--begin--*/
+        @media screen and (max-width:576px){
+            nav ul{
+                position: absolute;
+                top:0;
+                left:0;
+                width:0%;
+                height: 100%;
+                background-color: rgba(0,0,0,.8);
+                padding-top:50px;
+                overflow:hidden;
+                transition:all .5s;
+                
+            }
+            nav ul li{
+                white-space: nowrap;
+            }
+            .showMenu{
+                width: 30%;
+                
+            }
+            .flipTriangle{
+                transform: rotate(180deg);
+            }
+            
+           
+           
+        #bar{
+            display: block;
+        }
+        }
+/*        手機版樣式--end--*/
+        @keyframes barAnimator{
+            from{color:black;}
+            to{color:gray;}
+        }
+    
+    </style>
+</head>
+<body>
+  <div id="container">
+      <header>巨匠緍紗社</header>
+      <banner>
+          <!-- blueberry -->
+
+    <div class="blueberry">
+      <ul class="slides">
+        <li><img src="images/01.jpg" /></li>
+        <li><img src="images/02.jpg" /></li>
+        <li><img src="images/03.jpg" /></li>
+      </ul>
+    </div>
+
+<!-- blueberry -->
+      </banner>
+      <nav>
+          <ul>
+              <li>關於我們</li>
+              <li>最新消息</li>
+              <li>作品介紹</li>
+              <li>地理位置</li>
+              <li>聯絡我們</li>
+          </ul>
+      </nav>
+      <i id="bar" class="fas fa-caret-right fa-4x "></i>
+  </div>
+<!--  ---連結外部特效檔--begin---->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script src="js/jquery.blueberry.js"></script>
+  <script src="https://kit.fontawesome.com/c377775005.js" crossorigin="anonymous"></script>
+  
+<!--  ---連結外部特效檔--end---->
+
+<!--自行撰寫js區塊--begin---->
+<script>
+    $(window).load(function() {
+	$('.blueberry').blueberry();
+});
+ $(document).ready(function(){
+//     alert("這是我的第一個jquery程式");
+//     按一下BAR顯示訊息
+     $("#bar").on("click",function(){
+         $("nav ul").toggleClass("showMenu");
+         $(this).toggleClass("flipTriangle");
+     });
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+ })
+    
+</script>
+<!--自行撰寫js區塊--end---->
+</body>
+</html>
